@@ -13,6 +13,10 @@ Upgrade ubuntu
 
 `sudo apt upgrade`
 
+![ubuntu upgrade and update](https://github.com/olateekay/deploying-mern-stack/blob/main/images/mern1.JPG)
+
+![alt text](https://github.com/olateekay/deploying-mern-stack/blob/main/images/mern2.JPG)
+
 Get the location of Node.js software from Ubuntu repositories.
 
 `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`

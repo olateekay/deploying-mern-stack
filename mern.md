@@ -378,6 +378,52 @@ Start your server using the command:
 
 You shall see a message ‘Database connected successfully’, if so - we have our backend configured. Now we are going to test it
 
-[](https://github.com/olateekay/deploying-mern-stack/blob/main/images/mern23.JPG)
+![](https://github.com/olateekay/deploying-mern-stack/blob/main/images/mern23.JPG)
+
+*Testing Backend Code without Frontend using RESTful API*
+
+So far we have written backend part of our `To-Do` application, and configured a database, but we do not have a frontend UI yet. We need ReactJS code to achieve that. But during development, we will need a way to test our code using RESTfulL API. Therefore, we will need to make use of some API development client to test our code.
+
+In this project, we will use Postman to test our API. 
+
+You should test all the API endpoints and make sure they are working. For the endpoints that require body, you should send JSON back with the necessary fields since it’s what we setup in our code.
+
+*Step 2 - Frontend creation*
+
+To start out with the frontend of the `To-do `app, we will use the `create-react-app` command to scaffold our app.
+
+In the same root directory as your backend code, which is the Todo directory, run:
+
+`$ npx create-react-app client`
+![](https://github.com/olateekay/deploying-mern-stack/blob/main/images/Screen%20Shot%202021-03-20%20at%2010.50.56%20PM.png)
+
+![](https://github.com/olateekay/deploying-mern-stack/blob/main/images/Screen%20Shot%202021-03-20%20at%2010.52.20%20PM.png)
+
+This will create a new folder in your `Todo` directory called client, where you will add all the react code.
+
+*Running a React App*
+
+Before testing the react app, there are some dependencies that need to be installed.
+
+Install concurrently. It is used to run more than one command simultaneously from the same terminal window.
+
+`$ npm install concurrently --save-dev`
+
+Install nodemon. It is used to run and monitor the server. If there is any change in the server code, nodemon will restart it automatically and load the new changes.
+
+`$ npm install nodemon --save-dev`
+
+In Todo folder open the `package.json` file. Change the highlighted part of the below screenshot and replace with the code below
+
+"scripts": {
+"start": "node index.js",
+"start-watch": "nodemon index.js",
+"dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
+},
+
+![](https://github.com/olateekay/deploying-mern-stack/blob/main/images/Screen%20Shot%202021-03-20%20at%2010.55.29%20PM.png)
+
+
+
 
 
